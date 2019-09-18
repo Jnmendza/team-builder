@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Teams from "./components/Teams";
@@ -9,7 +8,7 @@ import TeamForm from "./components/TeamForm";
 function App() {
   const [teams, setTeams] = useState([
     {
-      id: 1,
+      id: 0,
       title: "Team List",
       body: "Words words words words"
     }
@@ -29,7 +28,7 @@ function App() {
     <div className="App">
       <h1>Display Teams</h1>
       <TeamForm addNewTeam={addNewTeam}/>
-      <Teams />
+      <Teams teams={teams} />
     </div>
   );
 }
