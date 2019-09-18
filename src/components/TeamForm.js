@@ -1,4 +1,11 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+`;
 
 const TeamForm = props => {
     // console.log(props);
@@ -21,7 +28,7 @@ const TeamForm = props => {
     };
 
     return (
-        <form onSubmit={submitForm}>
+        <Form onSubmit={submitForm}>
             <label htmlFor="title">Team Title</label>
 
             <input 
@@ -45,7 +52,7 @@ const TeamForm = props => {
             <button type="submit">Add Team</button>
 
                 
-        </form>
+        </Form>
     )
 };
 
